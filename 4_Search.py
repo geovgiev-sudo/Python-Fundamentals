@@ -6,8 +6,10 @@ magic_lst = []
 for i in range(n):
     strings = input()
     lst.append(strings)
-    if magic_word in strings:
-        magic_lst.append(strings)
+
+for string in lst:
+    if magic_word in string:
+        magic_lst.append(string)
 
 print(lst)
 print(magic_lst)
