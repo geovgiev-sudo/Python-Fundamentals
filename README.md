@@ -1,17 +1,8 @@
 # Python Fundamentals - SoftUni Course
 
-A collection of exercises and labs from the SoftUni Python Fundamentals course, organized by topic.
+A collection of exercises from the SoftUni Python Fundamentals course
 
 ## 📚 Table of Contents
-
-1. [Basic Syntax, Conditional Statements and Loops](#01-basic-syntax)
-2. [Data Types and Variables](#02-data-types)
-3. [Lists Basics](#03-lists-basics)
-4. [Functions](#04-functions)
-5. [Lists Advanced](#05-lists-advanced)
-6. [Exams](#06-exams)
-
-## 📂 Sections
 
 ### 1. Basic Syntax
 
