@@ -4,7 +4,7 @@ A collection of exercises from the SoftUni Python Fundamentals course
 
 ## 📚 Table of Contents
 
-### 1. Basic Syntax
+### :white_check_mark: 1. Basic Syntax
 
 Introduction to Python basics including syntax, input/output, conditional statements, and loops.
 
@@ -13,7 +13,7 @@ Introduction to Python basics including syntax, input/output, conditional statem
   - [01-Basic-Syntax-Conditional-Statements-and-Loops-Exercise](https://github.com/geovgiev-sudo/Python-Fundamentals/tree/master/01-Basic-Syntax/01-Basic-Syntax-Conditional-Statements-and-Loops-Exercise)
   - [01-Basic-Syntax-Conditional-Statements-and-Loops-More-Exercise](https://github.com/geovgiev-sudo/Python-Fundamentals/tree/master/01-Basic-Syntax/01-Basic-Syntax-Conditional-Statements-and-Loops-More-Exercise)
 
-### 2. Data Types
+### :white_check_mark: 2. Data Types
 
 Working with numbers, strings, and other core data types, including exercises and more advanced tasks.
 
@@ -22,7 +22,7 @@ Working with numbers, strings, and other core data types, including exercises an
   - [02-Data-Types-and-Variables-Exercise](https://github.com/geovgiev-sudo/Python-Fundamentals/tree/master/02-Data-Types/02-Data-Types-and-Variables-Exercise)
   - [02-Data-Types-and-Variables-More-Exercise](https://github.com/geovgiev-sudo/Python-Fundamentals/tree/master/02-Data-Types/02-Data-Types-and-Variables-More-Exercise)
 
-### 3. Lists Basics
+### :white_check_mark: 3. Lists Basics
 
 Fundamentals of lists, indexing, and basic list operations.
 
@@ -31,7 +31,7 @@ Fundamentals of lists, indexing, and basic list operations.
   - [03-Lists-Basics-Exercise](https://github.com/geovgiev-sudo/Python-Fundamentals/tree/master/03-Lists-Basics/03-Lists-Basics-Exercise)
   - [03-Lists-Basics-More-Exercise](https://github.com/geovgiev-sudo/Python-Fundamentals/tree/master/03-Lists-Basics/03-Lists-Basics-More-Exercise)
 
-### 4. Functions
+### :white_check_mark: 4. Functions
 
 Defining and using functions, parameters, return values, and problem solving with reusable logic.
 
@@ -40,7 +40,7 @@ Defining and using functions, parameters, return values, and problem solving wit
   - [04-Functions-Exercise](https://github.com/geovgiev-sudo/Python-Fundamentals/tree/master/04-Functions/04-Functions-Exercise)
   - [04-Functions-More-Exercise](https://github.com/geovgiev-sudo/Python-Fundamentals/tree/master/04-Functions/04-Functions-More-Exercise)
 
-### 5. Lists Advanced
+### :white_check_mark: 5. Lists Advanced
 
 Advanced list operations, list comprehensions, and problem-solving with collections.
 
@@ -49,7 +49,7 @@ Advanced list operations, list comprehensions, and problem-solving with collecti
   - [05-Lists-Advanced-Exercise](https://github.com/geovgiev-sudo/Python-Fundamentals/tree/master/05-Lists-Advanced/05-Lists-Advanced-Exercise)
   - [05-Lists-Advanced-More-Exercise](https://github.com/geovgiev-sudo/Python-Fundamentals/tree/master/05-Lists-Advanced/05-Lists-Advanced-More-Exercise)
 
-## Exams
+## :white_check_mark: Exams
 
 Mid-exam preparation sets covering all topics from the course.
 
