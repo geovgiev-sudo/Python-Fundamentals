@@ -1,6 +1,6 @@
-# Python Fundamentals - SoftUni Course
+# :memo: Python Fundamentals - SoftUni Course
 
-:memo: A collection of exercises from the SoftUni Python Fundamentals course
+A collection of exercises from the SoftUni Python Fundamentals course
 
 ## 📚 Table of Contents
 
