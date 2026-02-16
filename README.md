@@ -1,4 +1,4 @@
-# Python Fundamentals - SoftUni Course
+# :memo: Python Fundamentals - SoftUni Course
 
 A collection of exercises from the SoftUni Python Fundamentals course
 
