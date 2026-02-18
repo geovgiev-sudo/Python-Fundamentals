@@ -1,9 +1,5 @@
 population = [int(i) for i in input().split(", ")]
-minimum_wealth = int(input())
-
-population = list(map(int, input().split(", ")))
 min_wealth = int(input())
-
 
 if sum(population) < min_wealth * len(population):
     print("No equal distribution possible")
