@@ -13,7 +13,7 @@ class User:
         post = Post(self, content)
         self.posts.append(post)
 
-    def view_post(self):
+    def view_posts(self):
         print(f"\n{self.username}'s Posts: ")
         for post in self.posts:
             print(f" - {post.content} by ({post.author.username})")
@@ -37,9 +37,19 @@ class AdminUser(User):
         return content
 
     def create_important_post(self, content):
-        important_content = self.prepare_important_content
+        important_content = self.prepare_important_content(content)
         post = Post(self, important_content)
         self.posts.append(post)
         print(f"{self.username} posted in IMPORTANT message: {important_content}")
 
 
+mario = User("Mario")
+ivan = AdminUser("Ivan")
+
+mario.add_friend(ivan)
+ivan.create_post("System maintenance tonight")
+ivan.create_important_post("Security alert!")
+mario.create_post("Hello, SoftUni!")
+
+mario.view_posts()
+ivan.view_posts()
