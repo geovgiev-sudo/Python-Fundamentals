@@ -10,7 +10,7 @@ class Car:
         print(f"The {self.color} {self.brand} is refueling with petrol.")
 
 class ElectricCar(Car):
-    def __init__(self, color, brand, battery_range):
+    def __init__(self, color, brand, battery_range: int):
         super().__init__(color, brand)
         self.battery_range = battery_range
 
