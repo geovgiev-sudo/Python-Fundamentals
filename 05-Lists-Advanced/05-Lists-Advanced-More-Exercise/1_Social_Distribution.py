@@ -19,23 +19,6 @@ else:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 population = [int(i) for i in input().split(", ")]
 min_wealth = int(input())
 
