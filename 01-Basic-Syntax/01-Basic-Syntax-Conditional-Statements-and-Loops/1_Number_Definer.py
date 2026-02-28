@@ -1,5 +1,5 @@
 n = float(input())
-
+num = input()
 
 if n == 0:
     print('zero')

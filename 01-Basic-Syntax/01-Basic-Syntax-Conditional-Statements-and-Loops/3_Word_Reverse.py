@@ -1,4 +1,3 @@
-from operator import index
 
 word = input()
 reversed_word = ""
