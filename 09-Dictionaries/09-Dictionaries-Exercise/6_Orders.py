@@ -2,9 +2,7 @@ command = input()
 products = {}
 while command != "buy":
     info = command.split()
-    name = info[0]
-    price = float(info[1])
-    quantity = int(info[2])
+    name, price, quantity = info[0], float(info[1]), int(info[2])
     if name not in products.keys():
         products[name] = {}
         products[name]["quantity"] = quantity
@@ -26,3 +24,35 @@ for product_name, quantity_price in products.items():
             cost = value
     total_price = count * cost
     print(f"{product_name} -> {total_price:.2f}")
+
+
+# UPGRADED VERSION
+
+products = {}
+
+while True:
+    command = input()
+    if command == "buy":
+        break
+
+    # 1. Unpack and convert in one go
+    name, price, quantity = command.split()
+    price = float(price)
+    quantity = int(quantity)
+
+    # 2. Simplified update logic
+    if name not in products:
+        # Store as [price, quantity]
+        products[name] = [price, quantity]
+    else:
+        # Update quantity and replace price
+        products[name][0] = price
+        products[name][1] += quantity
+
+# 3. Direct access in the final loop
+for name, data in products.items():
+    current_price = data[0]
+    total_quantity = data[1]
+    total_cost = current_price * total_quantity
+
+    print(f"{name} -> {total_cost:.2f}")
