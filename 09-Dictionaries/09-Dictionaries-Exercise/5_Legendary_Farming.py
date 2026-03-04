@@ -1,42 +1,74 @@
-# ПРАВИЛНО РЕШЕНИЕ С "ПРАВИЛНИ" ВХОДОВЕ
+# # ПРАВИЛНО РЕШЕНИЕ С "ПРАВИЛНИ" ВХОДОВЕ
+#
+# materials = {"shards": 0, "fragments": 0, "motes": 0}
+# legendary_item = ""
+# won_legendary_item = False
+#
+# while not won_legendary_item:
+#     current_materials = input().split()
+#
+#     for index in range(0, len(current_materials), 2):
+#         key = current_materials[index + 1].lower()
+#         value = int(current_materials[index])
+#
+#         if key not in materials.keys():
+#             materials[key] = 0
+#         materials[key] += value
+#
+#         if materials["shards"] >= 250:
+#             legendary_item = "Shadowmourne"
+#             materials["shards"] -= 250
+#             won_legendary_item = True
+#
+#         elif materials["fragments"] >= 250:
+#             legendary_item = "Valanyr"
+#             materials["fragments"] -= 250
+#             won_legendary_item = True
+#
+#         elif materials["motes"] >= 250:
+#             legendary_item = "Dragonwrath"
+#             materials["motes"] -= 250
+#             won_legendary_item = True
+#
+#         if won_legendary_item:
+#             break
+#
+# print(f"{legendary_item} obtained!")
+#
+# for material, quantity in materials.items():
+#     print(f"{material}: {quantity}")
 
-materials = {"shards": 0, "fragments": 0, "motes": 0}
-legendary_item = ""
-won_legendary_item = False
 
-while not won_legendary_item:
-    current_materials = input().split()
+# Gemini решение
 
-    for index in range(0, len(current_materials), 2):
-        key = current_materials[index + 1].lower()
-        value = int(current_materials[index])
+key_materials = {"shards": 0, "fragments": 0, "motes": 0}
+junk_items = {}
+legendary_items = {"shards": "Shadowmourne", "fragments": "Valanyr", "motes": "Dragonwrath"}
+obtained = False
 
-        if key not in materials.keys():
-            materials[key] = 0
-        materials[key] += value
+while not obtained:
+    line = input().split()
+    for i in range(0, len(line), 2):
+        quantity = int(line[i])
+        material = line[i+1].lower()
 
-        if materials["shards"] >= 250:
-            legendary_item = "Shadowmourne"
-            materials["shards"] -= 250
-            won_legendary_item = True
+        if material in key_materials:
+            key_materials[material] += quantity
+            if key_materials[material] >= 250:
+                print(f"{legendary_items[material]} obtained!")
+                key_materials[material] -= 250
+                obtained = True
+                break
+        else:
+            junk_items[material] = junk_items.get(material, 0) + quantity
 
-        elif materials["fragments"] >= 250:
-            legendary_item = "Valanyr"
-            materials["fragments"] -= 250
-            won_legendary_item = True
+# Printing results
+for mat, qty in key_materials.items():
+    print(f"{mat}: {qty}")
+for mat, qty in junk_items.items():
+    print(f"{mat}: {qty}")
 
-        elif materials["motes"] >= 250:
-            legendary_item = "Dragonwrath"
-            materials["motes"] -= 250
-            won_legendary_item = True
 
-        if won_legendary_item:
-            break
-
-print(f"{legendary_item} obtained!")
-
-for material, quantity in materials.items():
-    print(f"{material}: {quantity}")
 
 
 # МОЕТО РЕШЕНИЕ С ОПРАВЕНИ ВХОДОВЕ НА СОФТУНИ ПЕДЕРАСИ
