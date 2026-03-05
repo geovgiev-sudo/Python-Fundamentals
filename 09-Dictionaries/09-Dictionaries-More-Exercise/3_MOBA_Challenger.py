@@ -36,18 +36,32 @@ while True:
 
 
 players_data = {}
+
+# Първи начин да се добавят тотал точките :
+
 # for player, info in players.items():
 #     for role, points in info.items():
 #         if player not in players_data:
 #             players_data[player] = 0
 #         players_data[player] += points
 
-for player, info in players.items():
-    players_data[player] = sum(info.values())
+# sorted_total = sorted(players_data.items(), key=lambda x: (-x[1], x[0]))
 
-sorted_total = sorted(players_data.items(), key=lambda x: (-x[1], x[0]))
+# Втори начин да се добавят тотал точките :
 
-for player, total_skill in sorted_total:
+# for player, info in players.items():
+#     players_data[player] = sum(info.values())
+
+
+# sorted_total = sorted(players_data.items(), key=lambda x: (-x[1], x[0]))
+
+
+# Трети начин да се добавят тотал точките :
+
+sorted_total = sorted(players.items(), key=lambda x: (-sum(x[1].values()), x[0]))
+
+for player, info in sorted_total:
+    total_skill = sum(info.values())
     print(f"{player}: {total_skill} skill")
     current_player = players[player]
     sorted_position = sorted(current_player.items(), key=lambda x: (-x[1], x[0]))
