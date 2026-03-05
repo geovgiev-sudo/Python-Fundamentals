@@ -5,7 +5,7 @@ while True:
     if command == "Season end":
         break
 
-    if "->" in command:
+    if " -> " in command:
         player, position, skill = command.split(" -> ")
         skill = int(skill)
         if player not in players:
@@ -16,7 +16,7 @@ while True:
         players[player][position] = max(players[player].get(position, 0), skill)
 
 
-    elif "vs" in command:
+    elif " vs " in command:
         player1, player2 = command.split(" vs ")
         if player1 in players and player2 in players:
             common_position = False
