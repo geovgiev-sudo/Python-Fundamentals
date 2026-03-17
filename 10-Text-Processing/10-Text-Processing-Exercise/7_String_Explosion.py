@@ -1,3 +1,21 @@
+text = input()
+final_text = ""
+strength = 0
+for i in range(len(text)):
+    if text[i] == ">":
+        final_text += ">"
+        explosion_strength = int(text[i + 1])
+        strength += explosion_strength
+    elif strength > 0:
+        strength -= 1
+    else:
+        final_text += text[i]
+
+print(final_text)
+
+
+
+
 some_string = input()
 final_string = ""
 strength = 0

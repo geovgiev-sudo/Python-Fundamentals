@@ -1,3 +1,28 @@
+text = input()
+substring = ""
+number = ""
+final_rage = ""
+for char in text:
+    if char.isdigit():
+        number += char
+    elif not char.isdigit():
+        if number: # ако съществува
+            substring = substring * int(number)
+            final_rage += substring.upper()
+            substring = ""
+            number = ""
+        substring += char
+
+final_rage += substring.upper() * int(number)
+print(f"Unique symbols used: {len(set(final_rage))}")
+print(final_rage)
+
+
+
+
+
+
+
 # text = input()
 # rage_message = ""
 # sub_string = ""
@@ -19,58 +44,58 @@
 #
 # print(f"Unique symbols used: {len(set(rage_message))}")
 # print(rage_message)
-#
-#
-# # ver 2
-#
-# string_sequence = input()
-#
-# result = ""
-# current_string = ""
-# current_number = ""
-#
-# for char in string_sequence:
-#     if not char.isdigit():
-#         if current_number:
-#             result += current_string * int(current_number)
-#             current_string = ""
-#             current_number = ""
-#         current_string += char
-#     else:
-#         current_number += char
-#
-# result += current_string * int(current_number)
-#
-# result = result.upper()
-#
-# print(f"Unique symbols used: {len(set(result))}")
-# print(result)
+
+
+# ver 2
+
+string_sequence = input()
+
+result = ""
+current_string = ""
+current_number = ""
+
+for char in string_sequence:
+    if not char.isdigit():
+        if current_number:
+            result += current_string * int(current_number)
+            current_string = ""
+            current_number = ""
+        current_string += char
+    else:
+        current_number += char
+
+result += current_string * int(current_number)
+
+result = result.upper()
+
+print(f"Unique symbols used: {len(set(result))}")
+print(result)
 
 
 # ver 3 Ines Ivanova 2021
 
-data = input()
-
-index = 0
-current_string = ""
-final_result = ""
-
-while index < len(data):
-
-    if not data[index].isdigit():
-        current_string += data[index]
-        index += 1
-    else:
-        current_number = ""
-        while data[index].isdigit():
-            current_number += data[index]
-            index += 1
-            if index == len(data):
-                break
-        current_number = int(current_number)
-        output = current_string.upper() * current_number
-        final_result += output
-        current_string = ""
-
-print(f"Unique symbols used: {len(set(final_result))}")
-print(final_result)
+# data = input()
+#
+# index = 0
+# current_string = ""
+# final_result = ""
+#
+# while index < len(data):
+#
+#     if not data[index].isdigit():
+#         current_string += data[index]
+#         index += 1
+#     else:
+#         current_number = ""
+#         while data[index].isdigit():
+#             current_number += data[index]
+#             index += 1
+#             if index == len(data):
+#                 break
+#         current_number = int(current_number)
+#         output = current_string.upper() * current_number
+#         final_result += output
+#         current_string = ""
+#
+# print(f"Unique symbols used: {len(set(final_result))}")
+# print(final_result)

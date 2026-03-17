@@ -11,3 +11,11 @@ sentence = input()
 for a, b in zip(sentence, sentence[1:]):
     if a == ":":
         print(a + b)
+
+
+# text = input()
+#
+# for i in range(len(text)):
+#     if text[i] == ":" and text[i + 1] != " ":
+#         result = text[i] + text[i + 1]
+#         print(result)

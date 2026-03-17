@@ -1,3 +1,24 @@
+text = input().split()
+result = 0
+
+for string in text:
+    letter1 = ord(string[0])
+    letter2 = ord(string[-1])
+    number = int(string[1:-1])
+
+    if chr(letter1).isupper():
+        result += number / (letter1 - 64)
+    elif chr(letter1).islower():
+        result += number * (letter1 - 96)
+    if chr(letter2).isupper():
+        result -= (letter2 - 64)
+    elif chr(letter2).islower():
+        result += (letter2 - 96)
+
+print(f"{result:.2f}")
+
+
+
 def upper(current_char:str) -> bool:
     return current_char.isupper()
 

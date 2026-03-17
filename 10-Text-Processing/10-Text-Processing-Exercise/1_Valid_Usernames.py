@@ -1,17 +1,17 @@
-# usernames = input().split(", ")
-# valid_usernames = []
-#
-# for username in usernames:
-#     if 3 <= len(username) <= 16:
-#         username_valid = True
-#         for char in username:
-#             if not (char.isalnum() or char == "-" or char == "_"):
-#                 username_valid = False
-#                 break
-#         if username_valid:
-#             valid_usernames.append(username)
-#
-# print("\n".join(valid_usernames))
+usernames = input().split(", ")
+valid_usernames = []
+
+for username in usernames:
+    if 3 <= len(username) <= 16:
+        username_valid = True
+        for char in username:
+            if not (char.isalnum() or char == "-" or char == "_"):
+                username_valid = False
+                break
+        if username_valid:
+            valid_usernames.append(username)
+
+print("\n".join(valid_usernames))
 
 # all comprehension
 
@@ -30,21 +30,21 @@
 
 #
 # # for-else
+# #
+# usernames = input().split(", ")
 #
-usernames = input().split(", ")
-
-for username in usernames:
-    # Rule 1: Check length
-    if 3 <= len(username) <= 16:
-
-        # Rule 2: Check characters
-        for char in username:
-            if not (char.isalnum() or char == "-" or char == "_"):
-                break  # We found an invalid char, STOP checking this name
-        else:
-            # This block only runs if the 'for' loop above FINISHED
-            # without ever hitting the 'break' line.
-            print(username)
+# for username in usernames:
+#     # Rule 1: Check length
+#     if 3 <= len(username) <= 16:
+#
+#         # Rule 2: Check characters
+#         for char in username:
+#             if not (char.isalnum() or char == "-" or char == "_"):
+#                 break  # We found an invalid char, STOP checking this name
+#         else:
+#             # This block only runs if the 'for' loop above FINISHED
+#             # without ever hitting the 'break' line.
+#             print(username)
 
 #
 # # Functions
