@@ -1,18 +1,40 @@
 n = int(input())
-synonyms = {}
+my_dict = {}
 
 for i in range(n):
     word = input()
     synonym = input()
 
-    if word in synonyms:
-        synonyms[word].append(synonym)
+    if word not in my_dict:
+        my_dict[word] = [synonym] # директно създаваме лист
     else:
-        synonyms[word] = [synonym]
+        my_dict[word].append(synonym)
 
-for word, synonym_list in synonyms.items():
-    synonym_str = ", ".join(synonym_list)
-    print(f"{word} - {synonym_str}")
+# за да спестим else
+#     if word not in synonyms:
+#         synonyms[word] = []
+#     synonyms[word].append(synonym)
+
+for word, synonyms in my_dict.items():
+    print(f"{word} - {', '.join(synonyms)}")
+
+
+
+# n = int(input())
+# synonyms = {}
+#
+# for i in range(n):
+#     word = input()
+#     synonym = input()
+#
+#     if word in synonyms:
+#         synonyms[word].append(synonym)
+#     else:
+#         synonyms[word] = [synonym]
+#
+# for word, synonym_list in synonyms.items():
+#     synonym_str = ", ".join(synonym_list)
+#     print(f"{word} - {synonym_str}")
 
 
 
