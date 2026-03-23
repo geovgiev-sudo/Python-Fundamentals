@@ -74,39 +74,40 @@ for mat, qty in junk_items.items():
 # МОЕТО РЕШЕНИЕ С ОПРАВЕНИ ВХОДОВЕ НА СОФТУНИ ПЕДЕРАСИ
 
 
-# materials = input().split()
-# my_dict = {"shards": 0, "fragments": 0, "motes": 0}
-# legendary_item = ""
-#
-# for i in range(0, len(materials), 2):
-#     quantity = int(materials[i])
-#     material = materials[i + 1].lower()
-#
-#     if material not in my_dict.keys():
-#         my_dict[material] = quantity
-#     else:
-#         my_dict[material] += quantity
-#
-#
-#     if my_dict["shards"] >= 250 or my_dict["fragments"] >= 250 or my_dict["motes"] >= 250:
-#         if my_dict["shards"] >= 250:
-#             legendary_item = "Shadowmourne"
-#             my_dict["shards"] -= 250
-#         elif my_dict["fragments"] >= 250:
-#             legendary_item = "Valanyr"
-#             my_dict["fragments"] -= 250
-#         elif my_dict["motes"] >= 250:
-#             legendary_item = "Dragonwrath"
-#             my_dict["motes"] -= 250
-#
-#         print(f"{legendary_item} obtained!")
-#         print(f"shards: {my_dict['shards']}")
-#         print(f"fragments: {my_dict['fragments']}")
-#         print(f"motes: {my_dict['motes']}")
-#         for item, quantity in my_dict.items():
-#             if item != "shards" and item != "fragments" and item != "motes":
-#                 print(f"{item}: {quantity}")
-#         break
+materials = input().split()
+my_dict = {"shards": 0, "fragments": 0, "motes": 0}
+legendary_item = ""
+
+for i in range(0, len(materials), 2):
+    quantity = int(materials[i])
+    material = materials[i + 1].lower()
+
+    if material not in my_dict.keys():
+        my_dict[material] = quantity
+
+    else:
+        my_dict[material] += quantity
+
+
+    if my_dict["shards"] >= 250 or my_dict["fragments"] >= 250 or my_dict["motes"] >= 250:
+        if my_dict["shards"] >= 250:
+            legendary_item = "Shadowmourne"
+            my_dict["shards"] -= 250
+        elif my_dict["fragments"] >= 250:
+            legendary_item = "Valanyr"
+            my_dict["fragments"] -= 250
+        elif my_dict["motes"] >= 250:
+            legendary_item = "Dragonwrath"
+            my_dict["motes"] -= 250
+
+        print(f"{legendary_item} obtained!")
+        print(f"shards: {my_dict['shards']}")
+        print(f"fragments: {my_dict['fragments']}")
+        print(f"motes: {my_dict['motes']}")
+        for item, quantity in my_dict.items():
+            if item != "shards" and item != "fragments" and item != "motes":
+                print(f"{item}: {quantity}")
+        break
 
 
 # GEMINI решение

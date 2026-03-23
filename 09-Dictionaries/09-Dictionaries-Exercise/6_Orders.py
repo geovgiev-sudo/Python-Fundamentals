@@ -43,7 +43,7 @@ while True:
     # 2. Simplified update logic
     if name not in products:
         # Store as [price, quantity]
-        products[name] = [price, quantity]
+        products[name] = [price, quantity] # правим си директно лист
     else:
         # Update quantity and replace price
         products[name][0] = price
@@ -51,8 +51,8 @@ while True:
 
 # 3. Direct access in the final loop
 for name, data in products.items():
-    current_price = data[0]
-    total_quantity = data[1]
+    current_price = data[0] # достъпваме листа
+    total_quantity = data[1] # достъпваме листа
     total_cost = current_price * total_quantity
 
     print(f"{name} -> {total_cost:.2f}")
