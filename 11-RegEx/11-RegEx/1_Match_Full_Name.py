@@ -3,7 +3,7 @@ import re
 pattern = r"\b[A-Z][a-z]+ [A-Z][a-z]+\b"
 
 text = input()
-valid_names = re.findall(pattern, text)
+valid_names = re.findall(pattern, text) # то ги пази в списък, създава списък
 print(" ".join(valid_names))
 
 
