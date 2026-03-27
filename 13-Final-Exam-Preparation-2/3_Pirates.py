@@ -1,50 +1,44 @@
-command = input()
 cities = {}
-while command != "Sail":
-    info = command.split("||")
-    city = info[0]
-    population = int(info[1])
-    gold = int(info[2])
-    if city not in cities:
-        cities[city] = [population, gold]
-    else:
-        cities[city][0] += population
-        cities[city][1] += gold
 
-    command = input()
+command = input().split("||")
+while command[0] != "Sail":
+    city_name, population, gold = command[0], int(command[1]), int(command[2])
+    if city_name not in cities.keys():
+        cities[city_name] = {"population": 0, "gold": 0}
+    cities[city_name]["population"] += population
+    cities[city_name]["gold"] += gold
 
+    command = input().split("||")
 
-while True:
-    command2 = input()
-    if command2 == "End":
-        break
-    events = command2.split("=>")
-    action = events[0]
-    town = events[1]
-
+command = input().split("=>")
+while command[0] != "End":
+    action = command[0]
     if action == "Plunder":
-        people = int(events[2])
-        gold2 = int(events[3])
-        cities[town][0] -= people
-        cities[town][1] -= gold2
-        print(f"{town} plundered! {gold2} gold stolen, {people} citizens killed.")
-        if cities[town][0] <= 0 or cities[town][1] <= 0:
-            del cities[town]
+        town, people, gold = command[1], int(command[2]), int(command[3])
+        print(f"{town} plundered! {gold} gold stolen, {people} citizens killed.")
+        cities[town]["population"] -= people
+        cities[town]["gold"] -= gold
+        if cities[town]["population"] == 0 or cities[town]["gold"] == 0:
+            cities.pop(town)
             print(f"{town} has been wiped off the map!")
 
-
     elif action == "Prosper":
-        gold2 = int(events[2])
-        if gold2 < 0:
+        town, gold = command[1], int(command[2])
+        if gold < 0:
             print(f"Gold added cannot be a negative number!")
-            continue
-        cities[town][1] += gold2
-        print(f"{gold2} gold added to the city treasury. {town} now has {cities[town][1]} gold.")
+        else:
+            cities[town]["gold"] += gold
+            total_gold = cities[town]["gold"]
+            print(f"{gold} gold added to the city treasury. {town} now has {total_gold} gold.")
 
+    command = input().split("=>")
 
 if cities:
-    print(f"Ahoy, Captain! There are {(len(cities))} wealthy settlements to go to:")
-    for town_name, values in cities.items():
-        print(f"{town_name} -> Population: {values[0]} citizens, Gold: {values[1]} kg")
+    count = len(cities)
+    print(f"Ahoy, Captain! There are {count} wealthy settlements to go to:")
+    for town_name, town_data in cities.items():
+        people = town_data["population"]
+        gold = town_data["gold"]
+        print(f"{town_name} -> Population: {people} citizens, Gold: {gold} kg")
 else:
     print(f"Ahoy, Captain! All targets have been plundered and destroyed!")
